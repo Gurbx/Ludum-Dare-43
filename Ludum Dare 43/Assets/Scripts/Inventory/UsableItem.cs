@@ -11,4 +11,5 @@ public interface UsableItem {
 	Sprite getIcon();
 	void SetPlayerStatus(PlayerStatus status);
 	void SetProjectileSpawn (Transform transform);
+	void SetItemSlot (InventorySlot slot);
 }

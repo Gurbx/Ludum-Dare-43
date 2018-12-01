@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Spell : MonoBehaviour, UsableItem {
 
 	public PlayerStatus stats;
+	private InventorySlot slot;
 
 	[SerializeField] string name;
 	[SerializeField] string description;
@@ -15,6 +16,8 @@ public class Spell : MonoBehaviour, UsableItem {
 	[SerializeField] private Transform projectileSpawn;
 
 	[SerializeField] private int manaCost = 1;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -43,6 +46,9 @@ public class Spell : MonoBehaviour, UsableItem {
 		Destroy (projectile, 3.0f);
 	}
 
+	public void SetItemSlot (InventorySlot slot) {
+		this.slot = slot;
+	}
 
 	public string getName () {
 		return name;

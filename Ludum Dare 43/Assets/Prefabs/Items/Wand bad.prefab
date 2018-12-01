@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23086828439340334}
   - component: {fileID: 114855251689224790}
   m_Layer: 0
-  m_Name: Wand
+  m_Name: Wand bad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

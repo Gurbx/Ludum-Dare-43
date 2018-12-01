@@ -13,17 +13,21 @@ public class Chest : MonoBehaviour {
 
 	private GameObject popupText;
 	private GameObject lootWindow;
+	private GameObject player;
+
+	private bool active = false;
 
 
 	// Use this for initialization
 	void Start () {
 		popupText = GameObject.Find ("UI/Popup Text");
 		lootWindow = GameObject.Find ("UI/Loot Window");
+		player = GameObject.Find ("Player");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.E) && canInteract) {
+		if (Input.GetKeyDown(KeyCode.E) && canInteract && !active) {
 			if (isLocked) {
 				if (PlayerStatus.keys > 0)
 					Unlocked ();
@@ -35,16 +39,22 @@ public class Chest : MonoBehaviour {
 		}
 	}
 
+	public void setIsLooted(bool b) {
+		looted = b;
+	}
+
 	private void Unlocked(){
 		//TODO UNLOCK EFFECT
 		popupText.SendMessage ("SetPopupText", "[E] to Open");
 		isLocked = false;
-		PlayerStatus.keys -= 1;
+		player.GetComponent<PlayerStatus> ().RemoveKey ();
 	}
 
 	private void Open() {
 		popupText.SendMessage ("SetPopupText", "");
 		lootWindow.SendMessage ("Activate", loot);
+		lootWindow.SendMessage ("SetChest", gameObject);
+		active = true;
 	}
 			
 
@@ -66,6 +76,7 @@ public class Chest : MonoBehaviour {
 			popupText.SendMessage ("SetPopupText", "");
 			lootWindow.SendMessage ("Deactivate");
 			canInteract = false;
+			active = false;
 		}
 	}
 }

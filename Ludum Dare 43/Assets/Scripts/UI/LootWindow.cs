@@ -15,6 +15,7 @@ public class LootWindow : MonoBehaviour {
 	[SerializeField] Inventory inventory;
 	[SerializeField] PopUpText popup;
 
+	private GameObject chest;
 	private GameObject loot;
 
 	private bool windowActive = false;
@@ -23,13 +24,13 @@ public class LootWindow : MonoBehaviour {
 	void Start () {
 		
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.E) && windowActive){
+		if (Input.GetKeyDown(KeyCode.Y) && windowActive){
 			LootItem ();
 		}
-		if (Input.GetKeyDown(KeyCode.Q) && windowActive){
+		if (Input.GetKeyDown(KeyCode.N) && windowActive){
 			Deactivate ();
 		}
 	}
@@ -40,23 +41,31 @@ public class LootWindow : MonoBehaviour {
 		if (slot != null) {
 			WeaponHandler wepHandler = playerCam.GetComponent<WeaponHandler>();
 			wepHandler.AddItem(loot, slot);
+			chest.GetComponent<Chest>().setIsLooted (true);
 		}
+		Deactivate ();
+	}
+
+	public void SetChest(GameObject chest) {
+		this.chest = chest;
 	}
 
 	public void Activate(GameObject loot) {
+		this.loot = loot;
+
 		panel.SetActive (true);
 		windowActive = true;
-
-		this.loot = loot;
 
 		UsableItem item = loot.GetComponent<UsableItem> ();
 		name.text = item.getName ();
 		description.text = item.getDescription ();
-		icon = item.getIcon ();
+		icon.sprite = item.getIcon ();
 	}
 
 	public void Deactivate() {
 		panel.SetActive (false);
 		windowActive = false;
+		chest = null;
+		loot = null;
 	}
 }

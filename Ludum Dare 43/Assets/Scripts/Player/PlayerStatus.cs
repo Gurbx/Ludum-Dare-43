@@ -7,12 +7,13 @@ public class PlayerStatus : MonoBehaviour {
 
 	[SerializeField] private HealthBar hpBar;
 	[SerializeField] private ManaBar mpBar;
+	[SerializeField] private KeyInfo keyInfo;
 
 	public static int health = 3;
 	public static int maxHealth = 10;
 
-	public static int mana = 10;
-	public static int maxMana = 10;
+	public static int mana = 50;
+	public static int maxMana = 50;
 
 	public static int keys = 2;
 
@@ -24,8 +25,8 @@ public class PlayerStatus : MonoBehaviour {
 	public static void initialize() {
 		health = 10;
 		maxHealth = 10;
-		mana = 10;
-		maxMana = 10;
+		mana = 50;
+		maxMana = 50;
 		keys = 2;
 	}
 	
@@ -78,5 +79,18 @@ public class PlayerStatus : MonoBehaviour {
 
 	private static void GameOver() {
 		print ("Game Over");
+	}
+
+	public void RemoveKey() {
+		keys -= 1;
+		if (keys == 0) {
+			keys = 0;
+		}
+		keyInfo.UpdateKeys ();
+	}
+
+	public void AddKeys(int nr) {
+		keys += nr;
+		keyInfo.UpdateKeys ();
 	}
 }

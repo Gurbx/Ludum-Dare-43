@@ -8,7 +8,7 @@ public interface UsableItem {
 	void UseItem();
 	string getName ();
 	string getDescription();
-	Image getIcon();
+	Sprite getIcon();
 	void SetPlayerStatus(PlayerStatus status);
 	void SetProjectileSpawn (Transform transform);
 }

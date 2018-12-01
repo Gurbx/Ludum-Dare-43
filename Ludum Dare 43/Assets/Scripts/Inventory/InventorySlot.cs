@@ -53,6 +53,8 @@ public class InventorySlot : MonoBehaviour {
 
 	public void addItem(GameObject item) {
 		this.item = item;
+		icon.SetActive (true);
+		icon.GetComponent<Image> ().sprite = item.GetComponent<UsableItem> ().getIcon ();
 		isEmpty = false;
 	}
 }

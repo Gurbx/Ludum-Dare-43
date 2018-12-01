@@ -9,7 +9,7 @@ public class Spell : MonoBehaviour, UsableItem {
 
 	[SerializeField] string name;
 	[SerializeField] string description;
-	[SerializeField] Image icon;
+	[SerializeField] Sprite icon;
 
 	[SerializeField] private GameObject projectilePrefab;
 	[SerializeField] private Transform projectileSpawn;
@@ -52,7 +52,7 @@ public class Spell : MonoBehaviour, UsableItem {
 		return description;
 	}
 
-	public Image getIcon() {
+	public Sprite getIcon() {
 		return icon;
 	}
 

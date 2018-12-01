@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Spell : MonoBehaviour, UsableItem {
 
-	[SerializeField] private GameObject projectilePrefab;
-	[SerializeField] private float projectileSpeed;
+	[SerializeField] PlayerStatus stats;
 
+	[SerializeField] private GameObject projectilePrefab;
 	[SerializeField] private Transform projectileSpawn;
+
+	[SerializeField] private int manaCost = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -21,12 +23,18 @@ public class Spell : MonoBehaviour, UsableItem {
 		
 
 	public void UseItem() {
+		//Return if not enough mana
+		if (PlayerStatus.mana < manaCost)
+			return;
+
+		stats.useMana (manaCost);
+
 		var projectile = (GameObject)Instantiate (
 			                 projectilePrefab,
 			                 projectileSpawn.position,
 			                 projectileSpawn.rotation);
 
-		projectile.GetComponent<Rigidbody> ().velocity = projectile.transform.forward * projectileSpeed;
+		projectile.GetComponent<Rigidbody> ().velocity = projectile.transform.forward * projectile.GetComponent<Projectile>().speed;
 
 		Destroy (projectile, 3.0f);
 	}

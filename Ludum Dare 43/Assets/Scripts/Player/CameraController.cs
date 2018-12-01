@@ -10,6 +10,8 @@ public class CameraController : MonoBehaviour {
 	private float xClamp = 0;
 
 	void Start () {
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 		xClamp = 0;
 	}
 

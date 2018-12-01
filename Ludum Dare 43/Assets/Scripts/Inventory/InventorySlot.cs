@@ -8,26 +8,34 @@ public class InventorySlot : MonoBehaviour {
 	[SerializeField] private GameObject item;
 	private bool isSelected;
 	private bool isEmpty;
-	private Image bg;
 
 	// Use this for initialization
 	void Start () {
-		bg = GetComponent<Image> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (0) && isSelected && !isEmpty) {
-			item.SendMessage ("UseItem");
+		if (Input.GetMouseButtonDown (0) && isSelected) {
+			if (item != null) item.SendMessage ("UseItem");
 		}
 	}
 		
 	public void SetSelected(bool selected) {
 		isSelected = selected;
 		if (isSelected) {
-			bg.color = Color.white;
+			Select ();
 		} else {
-			bg.color = Color.gray;
+			Deselect ();
 		}
+	}
+
+	private void Deselect() {
+		GetComponent<Image> ().color = Color.gray;
+		if (item != null) item.SetActive (false);
+	}
+
+	private void Select() {
+		GetComponent<Image> ().color = Color.white;
+		if (item != null) item.SetActive (true);
 	}
 }

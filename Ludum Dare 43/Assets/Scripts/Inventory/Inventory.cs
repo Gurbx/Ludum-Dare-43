@@ -10,6 +10,8 @@ public class Inventory : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		slots = GetComponentsInChildren<InventorySlot> ();
+		deselectAll ();
+		slots [selectedIndex].SetSelected (true);
 	}
 
 	void Update () {

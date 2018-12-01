@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 54247346802109834}
   - component: {fileID: 114643189617237974}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: Projectile 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,8 +168,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 0.44105172, b: 0, a: 1}
+      key1: {r: 1, g: 0.9104993, b: 0, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -214,8 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6099faf846b9edf46aabe4317decc628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  damage: 1
+  speed: 10
+  damage: 2
 --- !u!135 &135559270182630076
 SphereCollider:
   m_ObjectHideFlags: 1

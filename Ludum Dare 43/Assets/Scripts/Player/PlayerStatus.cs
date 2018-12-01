@@ -15,7 +15,7 @@ public class PlayerStatus : MonoBehaviour {
 	public static int mana = 50;
 	public static int maxMana = 50;
 
-	public static int keys = 2;
+	public static int keys = 10;
 
 	// Use this for initialization
 	void Start () {
@@ -23,11 +23,11 @@ public class PlayerStatus : MonoBehaviour {
 	}
 
 	public static void initialize() {
-		health = 10;
+		health = 3;
 		maxHealth = 10;
 		mana = 50;
 		maxMana = 50;
-		keys = 2;
+		keys = 10;
 	}
 	
 	// Update is called once per frame

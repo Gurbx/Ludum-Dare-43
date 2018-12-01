@@ -57,6 +57,7 @@ public class InventorySlot : MonoBehaviour {
 		icon.SetActive (true);
 		icon.GetComponent<Image> ().sprite = item.GetComponent<UsableItem> ().getIcon ();
 		isEmpty = false;
+		if (isSelected == false) item.SetActive (false);
 	}
 
 	public void RemoveItem() {

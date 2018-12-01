@@ -8,6 +8,15 @@ TextureImporter:
     21300006: wands_3
     21300008: wands_4
     21300010: wands_5
+    21300012: items_0
+    21300014: items_1
+    21300016: items_2
+    21300018: items_3
+    21300020: items_4
+    21300022: items_5
+    21300024: items_6
+    21300026: items_7
+    21300028: items_8
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -69,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -80,7 +89,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -91,7 +100,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,7 +122,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -124,7 +133,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -135,7 +144,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -145,7 +154,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wands_0
+      name: items_0
       rect:
         serializedVersion: 2
         x: 0
@@ -159,13 +168,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f4aeea93f34ece47b18c3107b25a1ea
+      spriteID: c465edd39483473459436ce6764b15a3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wands_1
+      name: items_1
       rect:
         serializedVersion: 2
         x: 32
@@ -179,13 +188,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c864d65c3823c6a418a036231dc5277e
+      spriteID: 869b9ccdb3d83fa439d2937de5fb2b21
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wands_2
+      name: items_2
       rect:
         serializedVersion: 2
         x: 64
@@ -199,13 +208,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 911f96b3239a2044ab4f74683b49cfdb
+      spriteID: 6bbdf102df7f04645be3c4f6b4bc1356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wands_3
+      name: items_3
       rect:
         serializedVersion: 2
         x: 96
@@ -219,13 +228,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f81c6613faa4223459f10f723ac9496e
+      spriteID: e2f97580f18d9ca4d873995f2fed41d4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wands_4
+      name: items_4
       rect:
         serializedVersion: 2
         x: 0
@@ -239,13 +248,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4946d3ad6600baa4bb73d479177fd04a
+      spriteID: 3641025adcc88e649aca5ad3b68b442a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wands_5
+      name: items_5
       rect:
         serializedVersion: 2
         x: 32
@@ -259,7 +268,67 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45c046c9c84ee754a8e4fb4a80692187
+      spriteID: a19423742a67cae43bfd02c67b78f35a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c0cd967c3830f4f9d03d45da6fdb2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4002c325f8594cc4ebffa433a74be664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f505c8db3d9454c9c17608cd8c4e05
       vertices: []
       indices: 
       edges: []

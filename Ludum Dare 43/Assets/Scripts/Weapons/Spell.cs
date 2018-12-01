@@ -9,6 +9,7 @@ public class Spell : MonoBehaviour, UsableItem {
 	private InventorySlot slot;
 
 	[SerializeField] string name;
+	[TextArea]
 	[SerializeField] string description;
 	[SerializeField] Sprite icon;
 

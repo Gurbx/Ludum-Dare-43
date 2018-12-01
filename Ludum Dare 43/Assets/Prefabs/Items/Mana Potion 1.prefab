@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4589951631414412}
   - component: {fileID: 212896646438002074}
   - component: {fileID: 114297340918926714}
-  - component: {fileID: 114876977568973538}
+  - component: {fileID: 114043845203144602}
   m_Layer: 0
-  m_Name: Blue Wand
+  m_Name: Mana Potion 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,6 +42,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114043845203144602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1690645814707018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d5831d79dac504e897cdbb37f7b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  amountRestored: 15
+  stats: {fileID: 0}
+  name: Mana Potion
+  description: Restores 15 MP
+  icon: {fileID: 21300024, guid: e8623039e8ad8f940b0d007f451c3ead, type: 3}
 --- !u!114 &114297340918926714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,27 +70,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2116c9c7d9b8664d956f60e3170091e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114876977568973538
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690645814707018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9c0b698bc9455d418cbba550742a2d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stats: {fileID: 0}
-  name: Arcane Wand
-  description: '1 Damage
-
-    1 MP / Use'
-  icon: {fileID: 21300000, guid: 1a73cd01a74b25b40b9a40c54bac53c7, type: 3}
-  projectilePrefab: {fileID: 1362057542504174, guid: b32914b406a38ca4a92403a50aa600e6,
-    type: 2}
-  projectileSpawn: {fileID: 0}
-  manaCost: 1
 --- !u!212 &212896646438002074
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -109,12 +105,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300014, guid: e8623039e8ad8f940b0d007f451c3ead, type: 3}
+  m_Sprite: {fileID: 21300024, guid: e8623039e8ad8f940b0d007f451c3ead, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.625, y: 0.6875}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

@@ -18,6 +18,9 @@ public class Projectile : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col) {
+		if (col.gameObject.tag == "Enemy") {
+			col.gameObject.GetComponent<Health>().Damage (damage);
+		}
 		Destroy (gameObject);
 	}
 }

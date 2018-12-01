@@ -56,4 +56,13 @@ public class Inventory : MonoBehaviour {
 			slots [i].SetSelected (false);
 		}
 	}
+
+	public InventorySlot getEmptySlot() {
+		for (int i = 0; i < slots.GetLength (0); i++) {
+			if (slots [i].isSlotEmpty ()) {
+				return slots [i];
+			}
+		}
+		return null;
+	}
 }

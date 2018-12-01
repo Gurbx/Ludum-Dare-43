@@ -6,11 +6,18 @@ using UnityEngine.UI;
 public class InventorySlot : MonoBehaviour {
 
 	[SerializeField] private GameObject item;
+	[SerializeField] private GameObject icon;
 	private bool isSelected;
 	private bool isEmpty;
 
 	// Use this for initialization
 	void Start () {
+		if (item == null) {
+			isEmpty = true;
+			icon.SetActive (false);
+		} else
+			isEmpty = false;
+		
 	}
 	
 	// Update is called once per frame
@@ -37,5 +44,15 @@ public class InventorySlot : MonoBehaviour {
 	private void Select() {
 		GetComponent<Image> ().color = Color.white;
 		if (item != null) item.SetActive (true);
+	}
+
+
+	public bool isSlotEmpty() {
+		return isEmpty;
+	}
+
+	public void addItem(GameObject item) {
+		this.item = item;
+		isEmpty = false;
 	}
 }

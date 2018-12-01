@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Spell : MonoBehaviour, UsableItem {
 
-	[SerializeField] PlayerStatus stats;
+	public PlayerStatus stats;
+
+	[SerializeField] string name;
+	[SerializeField] string description;
+	[SerializeField] Image icon;
 
 	[SerializeField] private GameObject projectilePrefab;
 	[SerializeField] private Transform projectileSpawn;
@@ -21,7 +26,6 @@ public class Spell : MonoBehaviour, UsableItem {
 		
 	}
 		
-
 	public void UseItem() {
 		//Return if not enough mana
 		if (PlayerStatus.mana < manaCost)
@@ -40,4 +44,23 @@ public class Spell : MonoBehaviour, UsableItem {
 	}
 
 
+	public string getName () {
+		return name;
+	}
+
+	public string getDescription() {
+		return description;
+	}
+
+	public Image getIcon() {
+		return icon;
+	}
+
+	public void SetPlayerStatus(PlayerStatus status) {
+		this.stats = status;
+	}
+
+	public void SetProjectileSpawn(Transform tf) {
+		this.projectileSpawn = tf;
+	}
 }

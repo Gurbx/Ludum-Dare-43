@@ -96,10 +96,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c0b698bc9455d418cbba550742a2d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Wand 1
+  description: Super awesome wand
+  icon: {fileID: 0}
   projectilePrefab: {fileID: 1362057542504174, guid: b32914b406a38ca4a92403a50aa600e6,
     type: 2}
-  projectileSpeed: 10
   projectileSpawn: {fileID: 0}
+  manaCost: 1
 --- !u!136 &136969689747974522
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
 	[SerializeField] private float movementSpeed = 10;
-	[SerializeField] private float gravity = 240f;
+	[SerializeField] private float gravity = 40f;
 
 	private Vector3 moveDirection = Vector3.zero;
 	private CharacterController charController;

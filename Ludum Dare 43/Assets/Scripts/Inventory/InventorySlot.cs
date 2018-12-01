@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour {
 
-	private UsableItem item;
+	[SerializeField] private GameObject item;
 	private bool isSelected;
 	private bool isEmpty;
 	private Image bg;
@@ -18,7 +18,7 @@ public class InventorySlot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown (0) && isSelected && !isEmpty) {
-			//item.UseItem ();
+			item.SendMessage ("UseItem");
 		}
 	}
 		

@@ -6,6 +6,7 @@ public class Health : MonoBehaviour {
 
 	[SerializeField] private int health = 1;
 	[SerializeField] GameObject deathExplosion;
+	[SerializeField] AudioSource audio;
 	//[SerializeField] private ParticleEmitter emit;
 
 	private CombatEvent listener;
@@ -23,7 +24,8 @@ public class Health : MonoBehaviour {
 		if (health <= 0) {
 			health = 0;
 			Die ();
-		}
+		} else
+			audio.Play ();
 	}
 
 

@@ -9,7 +9,10 @@ public class PlayerStatus : MonoBehaviour {
 	[SerializeField] private ManaBar mpBar;
 	[SerializeField] private KeyInfo keyInfo;
 
-	public static int health = 3;
+	[SerializeField] AudioSource potionSound;
+	[SerializeField] AudioSource damagedSound;
+
+	public static int health = 10;
 	public static int maxHealth = 10;
 
 	public static int mana = 50;
@@ -23,7 +26,7 @@ public class PlayerStatus : MonoBehaviour {
 	}
 
 	public static void initialize() {
-		health = 3;
+		health = 10;
 		maxHealth = 10;
 		mana = 50;
 		maxMana = 50;
@@ -36,6 +39,7 @@ public class PlayerStatus : MonoBehaviour {
 	}
 
 	public void DamagePlayer(int damage) {
+		damagedSound.Play ();
 		health -= damage;
 		if (health <= 0) {
 			health = 0;
@@ -45,6 +49,7 @@ public class PlayerStatus : MonoBehaviour {
 	}
 
 	public void addHealth(int hp) {
+		potionSound.Play ();
 		health += hp;
 		if (health > maxHealth) 
 			health = maxHealth;
@@ -69,6 +74,7 @@ public class PlayerStatus : MonoBehaviour {
 	}
 
 	public void addMana(int mp) {
+		potionSound.Play ();
 		mana += mp;
 		if (mana > maxMana)
 			mana = maxMana;

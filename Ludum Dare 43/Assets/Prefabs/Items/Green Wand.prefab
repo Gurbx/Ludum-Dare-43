@@ -9,72 +9,55 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1690942401776858}
+  m_RootGameObject: {fileID: 1690645814707018}
   m_IsPrefabAsset: 1
---- !u!1 &1690942401776858
+--- !u!1 &1690645814707018
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4402223797220950}
-  - component: {fileID: 95485990835487070}
-  - component: {fileID: 212110936035628868}
-  - component: {fileID: 114863230206164528}
-  - component: {fileID: 135122685542509442}
-  - component: {fileID: 114680318674865014}
-  - component: {fileID: 54028716148789846}
-  - component: {fileID: 114380280118131612}
-  - component: {fileID: 82400426449051906}
+  - component: {fileID: 4589951631414412}
+  - component: {fileID: 212896646438002074}
+  - component: {fileID: 114297340918926714}
+  - component: {fileID: 114876977568973538}
+  - component: {fileID: 108822877676008428}
+  - component: {fileID: 95458562986095886}
+  - component: {fileID: 82598009949716954}
   m_Layer: 0
-  m_Name: Ball
-  m_TagString: Enemy
+  m_Name: Green Wand
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4402223797220950
+  m_IsActive: 0
+--- !u!4 &4589951631414412
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690942401776858}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.23, y: 1.8462415, z: 3.09}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1690645814707018}
+  m_LocalRotation: {x: 0.019537276, y: 0.93958586, z: 0.13435711, w: -0.31423712}
+  m_LocalPosition: {x: 0.42, y: -0.19000015, z: 0.55}
+  m_LocalScale: {x: 0.25000006, y: 0.24999997, z: 0.25000006}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &54028716148789846
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690942401776858}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!82 &82400426449051906
+--- !u!82 &82598009949716954
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690942401776858}
+  m_GameObject: {fileID: 1690645814707018}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 21aed753e14ca244691574df6adef952, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2db131b2c195f4e4988e59f1e1d91850, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.64
-  m_Pitch: 0.68
+  m_Volume: 0.79
+  m_Pitch: 0.81
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -157,16 +140,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &95485990835487070
+--- !u!95 &95458562986095886
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690942401776858}
+  m_GameObject: {fileID: 1690645814707018}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 903ed685b4cf7d542ae225025cd6a7a7, type: 2}
+  m_Controller: {fileID: 9100000, guid: ab05abfaa6340b640bd4753166677030, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -175,66 +158,80 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114380280118131612
-MonoBehaviour:
+--- !u!108 &108822877676008428
+Light:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690942401776858}
+  m_GameObject: {fileID: 1690645814707018}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a746049dd4cb5284c82a1fd212f1695a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 2
-  deathExplosion: {fileID: 1647119450985126, guid: 4f99cacb6e7bc1e4c8b267e1eac3f941,
-    type: 2}
-  audio: {fileID: 82400426449051906}
---- !u!114 &114680318674865014
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 0, g: 1, b: 0.14357376, a: 1}
+  m_Intensity: 1
+  m_Range: 5
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &114297340918926714
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690942401776858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 778eee334e737db489f4f824ac18ed9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  attackRange: 1
-  aggroRange: 10
-  damage: 1
-  attackCooldown: 1
---- !u!114 &114863230206164528
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690942401776858}
+  m_GameObject: {fileID: 1690645814707018}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2116c9c7d9b8664d956f60e3170091e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &135122685542509442
-SphereCollider:
+--- !u!114 &114876977568973538
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690942401776858}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_GameObject: {fileID: 1690645814707018}
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.35
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!212 &212110936035628868
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9c0b698bc9455d418cbba550742a2d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 0}
+  name: Wand of Nature
+  description: 2 Damage (2MP/Use)
+  icon: {fileID: 21300012, guid: e8623039e8ad8f940b0d007f451c3ead, type: 3}
+  projectilePrefab: {fileID: 1362057542504174, guid: 562e535788e14ec4180244050ebcc174,
+    type: 2}
+  projectileSpawn: {fileID: 0}
+  manaCost: 2
+  audio: {fileID: 82598009949716954}
+--- !u!212 &212896646438002074
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690942401776858}
+  m_GameObject: {fileID: 1690645814707018}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -264,7 +261,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6b8fb2cf3736a894494fbc1409e04274, type: 3}
+  m_Sprite: {fileID: 21300012, guid: e8623039e8ad8f940b0d007f451c3ead, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

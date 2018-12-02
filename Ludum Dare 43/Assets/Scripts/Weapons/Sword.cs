@@ -17,6 +17,7 @@ public class Sword : MonoBehaviour, UsableItem {
 	[SerializeField] string description;
 	[SerializeField] Sprite icon;
 	[SerializeField] int damage;
+	[SerializeField] AudioSource audio;
 
 	private SphereCollider colider;
 	private bool coliderActive = true;
@@ -55,6 +56,7 @@ public class Sword : MonoBehaviour, UsableItem {
 		colider.enabled = true;
 		coliderActive = true;
 		colider.radius = 2.6f; 
+		audio.Play ();
 	}
 
 	public void SetItemSlot (InventorySlot slot) {

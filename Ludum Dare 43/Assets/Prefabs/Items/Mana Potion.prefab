@@ -55,6 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   amountRestored: 15
+  audio: {fileID: 0}
   stats: {fileID: 0}
   name: Mana Potion
   description: Restores 15 MP

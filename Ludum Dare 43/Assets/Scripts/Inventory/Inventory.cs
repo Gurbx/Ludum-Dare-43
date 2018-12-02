@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour {
 
+	[SerializeField] private Text name, description;
 	private InventorySlot[] slots;
 	private int selectedIndex = 0;
 
@@ -12,15 +14,17 @@ public class Inventory : MonoBehaviour {
 		slots = GetComponentsInChildren<InventorySlot> ();
 		deselectAll ();
 		slots [selectedIndex].SetSelected (true);
+
+		UpdateText ();
 	}
 
 	void Update () {
 		//Key input
-		if (Input.GetKeyDown (KeyCode.Alpha1)) {
-			deselectAll ();
-			slots [0].SetSelected (true);
-			selectedIndex = 0;
-		}
+		//if (Input.GetKeyDown (KeyCode.Alpha1)) {
+		//	deselectAll ();
+		//	slots [0].SetSelected (true);
+		//	selectedIndex = 0;
+		//}
 
 		MouseScroll ();
 			
@@ -36,6 +40,7 @@ public class Inventory : MonoBehaviour {
 
 			deselectAll ();
 			slots [selectedIndex].SetSelected (true);
+			UpdateText ();
 		}
 
 		if (Input.GetAxis ("Mouse ScrollWheel") < 0f) {
@@ -47,6 +52,18 @@ public class Inventory : MonoBehaviour {
 
 			deselectAll ();
 			slots [selectedIndex].SetSelected (true);
+			UpdateText ();
+		}
+	}
+
+	private void UpdateText() {
+		if (slots [selectedIndex].isSlotEmpty() == false) {
+			UsableItem item = slots [selectedIndex].getItem ().GetComponent<UsableItem> ();
+			name.text = item.getName ();
+			description.text = item.getDescription ();
+		} else {
+			name.text = "";
+			description.text = "";
 		}
 	}
 

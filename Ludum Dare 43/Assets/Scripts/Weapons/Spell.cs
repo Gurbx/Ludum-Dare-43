@@ -8,6 +8,9 @@ public class Spell : MonoBehaviour, UsableItem {
 	public PlayerStatus stats;
 	private InventorySlot slot;
 
+	private float cooldown = 0.65f;
+	private float timer = 0;
+
 	[SerializeField] string name;
 	[TextArea]
 	[SerializeField] string description;
@@ -18,24 +21,32 @@ public class Spell : MonoBehaviour, UsableItem {
 
 	[SerializeField] private int manaCost = 1;
 
+	[SerializeField] AudioSource audio;
+
+	private Animator animator;
 
 
 	// Use this for initialization
 	void Start () {
-		
+		animator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		timer -= Time.deltaTime;
 	}
 		
 	public void UseItem() {
+		if (timer > 0)
+			return;
 		//Return if not enough mana
 		if (PlayerStatus.mana < manaCost)
 			return;
 
+		timer = cooldown;
+		animator.SetTrigger ("Attack");
 		stats.useMana (manaCost);
+		audio.Play ();
 
 		var projectile = (GameObject)Instantiate (
 			                 projectilePrefab,

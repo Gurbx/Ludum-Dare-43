@@ -55,6 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   amountRestored: 3
+  audio: {fileID: 0}
   stats: {fileID: 0}
   name: Health Potion
   description: Restores 3 HP

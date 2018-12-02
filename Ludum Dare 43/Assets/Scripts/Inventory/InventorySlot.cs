@@ -69,4 +69,8 @@ public class InventorySlot : MonoBehaviour {
 			isEmpty = true;
 		}
 	}
+
+	public GameObject getItem() {
+		return item;
+	}
 }

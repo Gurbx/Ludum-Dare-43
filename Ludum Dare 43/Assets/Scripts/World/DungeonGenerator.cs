@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DungeonGenerator : MonoBehaviour {
-	
+
+	private static int dungeonLevel = 1;
 	[SerializeField] private GameObject spawnRoom;
 	[SerializeField] private GameObject roomTable;
 	[SerializeField] private int numberOfRooms;
@@ -18,13 +19,16 @@ public class DungeonGenerator : MonoBehaviour {
 	void Start () {
 		grid = new GameObject[28,28];
 
-		rooms = roomTable.GetComponent<RoomTable>().GetLevel1Rooms (numberOfRooms);
+		rooms = roomTable.GetComponent<RoomTable> ().GetLevelRooms (numberOfRooms, dungeonLevel);
+			
 
 		//Init spawn room position in grid
 		grid [SPAWN_X, SPAWN_Y] = spawnRoom;
 		// Place rooms
 		//PlaceRoom(SPAWN_X, SPAWN_Y + 1);
 		BuildDungeon();
+
+		dungeonLevel++;
 	}
 
 	private void BuildDungeon() {

@@ -7,15 +7,25 @@ public class RoomTable : MonoBehaviour {
 	[SerializeField] private GameObject lootRoom;
 	[SerializeField] private GameObject alatarRoom;
 	[SerializeField] private GameObject endRoom;
-	[SerializeField] private List<GameObject> rooms;
+	[SerializeField] private List<GameObject> roomsLevel1;
+	[SerializeField] private List<GameObject> roomsLevel2;
 
-	public List<GameObject> GetLevel1Rooms(int roomCount) {
+	public List<GameObject> GetLevelRooms(int roomCount, int level) {
 		List<GameObject> generatedRooms = new List<GameObject> ();
+
+		List<GameObject> roomsList = roomsLevel1;
+		if (level == 1) {
+			//Level 1 specifics
+		} else if (level == 2) {
+			//Level 2 specifics
+			roomsList = roomsLevel2;
+		}
+
 		generatedRooms.Add (lootRoom);
 		generatedRooms.Add (alatarRoom);
 
 		while (generatedRooms.Count < roomCount) {
-			generatedRooms.Add (getRandomRoom ());
+			generatedRooms.Add (getRandomRoom (roomsList));
 		}
 		//Shuffle list
 		for (int i = 0; i < generatedRooms.Count; i++) {
@@ -29,9 +39,9 @@ public class RoomTable : MonoBehaviour {
 		return generatedRooms;
 	}
 
-	private GameObject getRandomRoom() {
-		int index = Random.Range (0, rooms.Count);
-		return rooms [index];
+	private GameObject getRandomRoom(List<GameObject> roomList) {
+		int index = Random.Range (0, roomList.Count);
+		return roomList [index];
 	}
 		
 }

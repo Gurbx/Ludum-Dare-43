@@ -5,7 +5,9 @@ using UnityEngine;
 public class DungeonGenerator : MonoBehaviour {
 	
 	[SerializeField] private GameObject spawnRoom;
-	[SerializeField] private List<GameObject> rooms;
+	[SerializeField] private GameObject roomTable;
+	[SerializeField] private int numberOfRooms;
+	private List<GameObject> rooms;
 
 	private const int ROOM_SIZE = 14;
 	private const int SPAWN_X = 14;
@@ -16,9 +18,7 @@ public class DungeonGenerator : MonoBehaviour {
 	void Start () {
 		grid = new GameObject[28,28];
 
-
-		//TODO Fill list with random rooms
-
+		rooms = roomTable.GetComponent<RoomTable>().GetLevel1Rooms (numberOfRooms);
 
 		//Init spawn room position in grid
 		grid [SPAWN_X, SPAWN_Y] = spawnRoom;

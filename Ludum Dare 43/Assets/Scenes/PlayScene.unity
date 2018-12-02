@@ -3728,27 +3728,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1615700964407636, guid: 8e1b24bca8ad5b745b58b830725db51d, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e1b24bca8ad5b745b58b830725db51d, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1339590265 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1089116466733414, guid: b3cbdd3f9acd62e45ac038067c2e5db4,
-    type: 2}
-  m_PrefabInternal: {fileID: 2095384444}
---- !u!114 &1339590269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1339590265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29e602dd594d51e4fbf4c207cc63b7a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1366111887
 GameObject:
   m_ObjectHideFlags: 0
@@ -5612,30 +5596,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 65667341480181416, guid: b3cbdd3f9acd62e45ac038067c2e5db4,
-        type: 2}
-      propertyPath: m_Center.x
+    - target: {fileID: 1062571094794652, guid: b3cbdd3f9acd62e45ac038067c2e5db4, type: 2}
+      propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 65667341480181416, guid: b3cbdd3f9acd62e45ac038067c2e5db4,
-        type: 2}
-      propertyPath: m_Center.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 65667341480181416, guid: b3cbdd3f9acd62e45ac038067c2e5db4,
-        type: 2}
-      propertyPath: m_Center.z
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 65667341480181416, guid: b3cbdd3f9acd62e45ac038067c2e5db4,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 1.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 65667341480181416, guid: b3cbdd3f9acd62e45ac038067c2e5db4,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 1.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3cbdd3f9acd62e45ac038067c2e5db4, type: 2}

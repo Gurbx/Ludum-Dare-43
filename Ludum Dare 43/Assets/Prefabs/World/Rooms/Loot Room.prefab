@@ -10333,7 +10333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b2a4b9aade6f848b7c470ea107966d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot: {fileID: 1690645814707018, guid: a6c980f47774f0c4daed8b4e63fd2400, type: 2}
+  loot: {fileID: 0}
   isLocked: 0
   lights: {fileID: 1679930316048838}
 --- !u!114 &114534694165768304

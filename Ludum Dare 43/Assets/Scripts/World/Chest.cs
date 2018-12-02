@@ -24,6 +24,10 @@ public class Chest : MonoBehaviour {
 		popupText = GameObject.Find ("UI/Popup Text");
 		lootWindow = GameObject.Find ("UI/Loot Window");
 		player = GameObject.Find ("Player");
+
+		if (loot == null) {
+			loot = GameObject.Find ("LootTable").GetComponent<LootTable> ().getRandomLoot ();
+		}
 	}
 	
 	// Update is called once per frame

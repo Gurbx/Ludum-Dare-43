@@ -15,8 +15,10 @@ public class InventorySlot : MonoBehaviour {
 		if (item == null) {
 			isEmpty = true;
 			icon.SetActive (false);
-		} else
+		} else {
 			isEmpty = false;
+			addItem (item);
+		}
 		
 	}
 	

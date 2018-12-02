@@ -10012,7 +10012,8 @@ MonoBehaviour:
   doorEast: {fileID: 1892027593917990}
   doorNorth: {fileID: 1953653848956914}
   doorSouth: {fileID: 1025044437609022}
-  isCleared: 0
+  isCleared: 1
+  isActive: 1
 --- !u!114 &114812710135143502
 MonoBehaviour:
   m_ObjectHideFlags: 1

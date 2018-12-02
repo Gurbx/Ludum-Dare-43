@@ -5,12 +5,11 @@ using UnityEngine;
 public class Room : MonoBehaviour {
 	[SerializeField] private GameObject doorWest, doorEast, doorNorth, doorSouth;
 	[SerializeField] private bool isCleared = false;
-
-	private bool isActive = false;
+	[SerializeField] private bool isActive = false;
 
 	// Use this for initialization
 	void Start () {
-		if (isCleared)
+		if (isCleared || !isActive)
 			setDoorsOpen (true);
 	}
 

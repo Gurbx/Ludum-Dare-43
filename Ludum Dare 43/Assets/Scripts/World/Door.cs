@@ -15,7 +15,7 @@ public class Door : MonoBehaviour {
 	}
 		
 	public void SetOpen(bool b) {
-		door.SetActive (b);
+		door.SetActive (!b);
 	}
 	
 	// Update is called once per frame

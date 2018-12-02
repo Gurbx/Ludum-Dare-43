@@ -585,26 +585,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114178470451338530, guid: 8e1b24bca8ad5b745b58b830725db51d,
-        type: 2}
-      propertyPath: isDoor
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114812710135143502, guid: 8e1b24bca8ad5b745b58b830725db51d,
-        type: 2}
-      propertyPath: isDoor
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114989873333853460, guid: 8e1b24bca8ad5b745b58b830725db51d,
-        type: 2}
-      propertyPath: isDoor
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114369720336055428, guid: 8e1b24bca8ad5b745b58b830725db51d,
-        type: 2}
-      propertyPath: isDoor
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e1b24bca8ad5b745b58b830725db51d, type: 2}
   m_IsPrefabAsset: 0
@@ -949,6 +929,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRoom: {fileID: 171264672}
   rooms:
+  - {fileID: 1615700964407636, guid: 8e1b24bca8ad5b745b58b830725db51d, type: 2}
+  - {fileID: 1615700964407636, guid: 8e1b24bca8ad5b745b58b830725db51d, type: 2}
+  - {fileID: 1615700964407636, guid: 8e1b24bca8ad5b745b58b830725db51d, type: 2}
+  - {fileID: 1615700964407636, guid: 8e1b24bca8ad5b745b58b830725db51d, type: 2}
   - {fileID: 1615700964407636, guid: 8e1b24bca8ad5b745b58b830725db51d, type: 2}
 --- !u!4 &380704291
 Transform:

@@ -73,7 +73,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1362057542504174, guid: b32914b406a38ca4a92403a50aa600e6,
     type: 2}
   projectileSpawn: {fileID: 0}
-  manaCost: 1
+  manaCost: 0
 --- !u!212 &212896646438002074
 SpriteRenderer:
   m_ObjectHideFlags: 1

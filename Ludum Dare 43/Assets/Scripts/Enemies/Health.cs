@@ -6,6 +6,8 @@ public class Health : MonoBehaviour {
 
 	[SerializeField] private int health = 1;
 
+	private CombatEvent listener;
+
 	private Animator animator;
 
 	void Start () {
@@ -23,7 +25,12 @@ public class Health : MonoBehaviour {
 	}
 
 
+	public void AddCombatEvent(CombatEvent listn) {
+		this.listener = listn;
+	}
+
 	private void Die() {
+		listener.EnemyDied ();
 		Destroy (gameObject);
 	}
 }

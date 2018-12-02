@@ -8,13 +8,13 @@ public class DungeonGenerator : MonoBehaviour {
 	[SerializeField] private List<GameObject> rooms;
 
 	private const int ROOM_SIZE = 14;
-	private const int SPAWN_X = 5;
-	private const int SPAWN_Y = 5;
+	private const int SPAWN_X = 14;
+	private const int SPAWN_Y = 14;
 
 	private GameObject[,] grid;
 
 	void Start () {
-		grid = new GameObject[11,11];
+		grid = new GameObject[28,28];
 
 
 		//TODO Fill list with random rooms

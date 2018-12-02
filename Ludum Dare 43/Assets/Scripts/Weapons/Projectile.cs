@@ -21,6 +21,6 @@ public class Projectile : MonoBehaviour {
 		if (col.gameObject.tag == "Enemy") {
 			col.gameObject.GetComponent<Health>().Damage (damage);
 		}
-		Destroy (gameObject);
+		if (col.gameObject.tag != "Room") Destroy (gameObject);
 	}
 }

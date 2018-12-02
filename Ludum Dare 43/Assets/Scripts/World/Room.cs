@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Room : MonoBehaviour {
+	enum RoomType {BATTLE, LOOT, SACRAFICE};
+	[SerializeField] private RoomType type;
 	[SerializeField] private GameObject doorWest, doorEast, doorNorth, doorSouth;
 	[SerializeField] private bool isCleared = false;
 	[SerializeField] private bool isActive = false;
 
+	[SerializeField] GameObject combatEvent;
+
 	// Use this for initialization
 	void Start () {
-		if (isCleared || !isActive)
-			setDoorsOpen (true);
+		setDoorsOpen (true);
 	}
 
 	public void AddDoor(int x, int y) {
@@ -46,5 +49,15 @@ public class Room : MonoBehaviour {
 	void ActivateEvents() {
 		isActive = true;
 		setDoorsOpen (false);
+		if (type == RoomType.BATTLE) {
+			combatEvent.GetComponent<CombatEvent> ().SpawnEnemies (gameObject);
+		}
+	}
+
+
+	public void RoomCleared() {
+		setDoorsOpen (true);
+		isCleared = true;
+		isActive = false;
 	}
 }

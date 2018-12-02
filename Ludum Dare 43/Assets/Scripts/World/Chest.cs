@@ -20,7 +20,7 @@ public class Chest : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		popupText = GameObject.FindWithTag ("Popup");
+		popupText = GameObject.Find ("UI/Popup Text");
 		lootWindow = GameObject.Find ("UI/Loot Window");
 		player = GameObject.Find ("Player");
 	}

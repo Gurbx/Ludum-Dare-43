@@ -786,6 +786,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 607662e9256eccf49893760dfe86f636, type: 2}
+    - target: {fileID: 1645202868363522, guid: b53203f3edbc35347a4a58630241b97e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b53203f3edbc35347a4a58630241b97e, type: 2}
   m_IsPrefabAsset: 0
@@ -2428,6 +2432,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 607662e9256eccf49893760dfe86f636, type: 2}
+    - target: {fileID: 1645202868363522, guid: b53203f3edbc35347a4a58630241b97e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b53203f3edbc35347a4a58630241b97e, type: 2}
   m_IsPrefabAsset: 0
@@ -2609,6 +2617,9 @@ MonoBehaviour:
   - {fileID: 1690645814707018, guid: 8ab55aef8cf84eb4cbb43c3cc6793b9e, type: 2}
   - {fileID: 1690645814707018, guid: 12bab8dd5a223494ba56844809e0d140, type: 2}
   - {fileID: 1690645814707018, guid: aff8efb9724f2e3459b0dc605148633c, type: 2}
+  - {fileID: 1690645814707018, guid: dad7170cb9e1b27498630dda91858a17, type: 2}
+  - {fileID: 1690645814707018, guid: 1f89e3a6bcbfa1d4d8e99b2fae046f94, type: 2}
+  - {fileID: 1690645814707018, guid: 14fbbb1fa6b557d4bb6895cc6e59de4d, type: 2}
 --- !u!4 &893566301
 Transform:
   m_ObjectHideFlags: 0
@@ -3367,7 +3378,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3931,7 +3942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b2a4b9aade6f848b7c470ea107966d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot: {fileID: 1690645814707018, guid: aff8efb9724f2e3459b0dc605148633c, type: 2}
+  loot: {fileID: 1690645814707018, guid: 8ab55aef8cf84eb4cbb43c3cc6793b9e, type: 2}
   isLocked: 0
   lights: {fileID: 553231595}
 --- !u!4 &1434532800
@@ -4957,6 +4968,10 @@ Prefab:
       propertyPath: isLocked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1645202868363522, guid: b53203f3edbc35347a4a58630241b97e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b53203f3edbc35347a4a58630241b97e, type: 2}
   m_IsPrefabAsset: 0
@@ -5411,7 +5426,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0

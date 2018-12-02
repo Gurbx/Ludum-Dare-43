@@ -15,6 +15,7 @@ public class Altar : MonoBehaviour {
 
 	[SerializeField] private SpriteRenderer spriteRenderer;
 	[SerializeField] private Sprite usedSprite;
+	[SerializeField] GameObject deathExplosion;
 
 	// Use this for initialization
 	void Start () {
@@ -61,9 +62,22 @@ public class Altar : MonoBehaviour {
 		active = false;
 		isUsed = true;
 		room.GetComponent<Room>().RoomCleared ();
+		DeathExplosion ();
 	}
 
 	public void SetRoom(GameObject room) {
 		this.room = room;
+	}
+
+	private void DeathExplosion(){
+		Vector3 position = new Vector3 (transform.position.x, 1, transform.position.z);
+		var expl = (GameObject)Instantiate(
+			deathExplosion,
+			position,
+			transform.rotation);
+
+
+		// Destroy after 1 seconds
+		Destroy(expl, 1.0f);        
 	}
 }

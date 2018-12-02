@@ -5,6 +5,8 @@ using UnityEngine;
 public class Health : MonoBehaviour {
 
 	[SerializeField] private int health = 1;
+	[SerializeField] GameObject deathExplosion;
+	//[SerializeField] private ParticleEmitter emit;
 
 	private CombatEvent listener;
 
@@ -31,6 +33,24 @@ public class Health : MonoBehaviour {
 
 	private void Die() {
 		listener.EnemyDied ();
+		DeathExplosion ();
 		Destroy (gameObject);
+	}
+
+	void DeathExplosion(){
+	//	emit.transform.parent = null;
+	//	emit.transform.localScale = new Vector3 (1, 1, 1);
+
+	//	emit.emissionRate = 0;
+
+
+		var expl = (GameObject)Instantiate(
+			deathExplosion,
+			transform.position,
+			transform.rotation);
+
+
+		// Destroy after 1 seconds
+		Destroy(expl, 1.0f);        
 	}
 }

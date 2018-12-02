@@ -10431,6 +10431,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 212115796313412158}
   usedSprite: {fileID: 21300028, guid: e8623039e8ad8f940b0d007f451c3ead, type: 3}
+  deathExplosion: {fileID: 1647119450985126, guid: 4f99cacb6e7bc1e4c8b267e1eac3f941,
+    type: 2}
 --- !u!135 &135052820844966300
 SphereCollider:
   m_ObjectHideFlags: 1

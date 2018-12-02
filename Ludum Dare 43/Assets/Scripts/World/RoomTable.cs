@@ -6,6 +6,7 @@ public class RoomTable : MonoBehaviour {
 
 	[SerializeField] private GameObject lootRoom;
 	[SerializeField] private GameObject alatarRoom;
+	[SerializeField] private GameObject endRoom;
 	[SerializeField] private List<GameObject> rooms;
 
 	public List<GameObject> GetLevel1Rooms(int roomCount) {
@@ -23,6 +24,8 @@ public class RoomTable : MonoBehaviour {
 			generatedRooms[i] = generatedRooms[randomIndex];
 			generatedRooms[randomIndex] = temp;
 		}
+
+		generatedRooms.Add (endRoom);
 		return generatedRooms;
 	}
 

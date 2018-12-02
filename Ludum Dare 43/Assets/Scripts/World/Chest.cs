@@ -7,6 +7,7 @@ public class Chest : MonoBehaviour {
 
 	[SerializeField] GameObject loot;
 	[SerializeField] bool isLocked;
+	[SerializeField] GameObject lights;
 
 	private bool canInteract;
 	private bool looted = false;
@@ -41,6 +42,8 @@ public class Chest : MonoBehaviour {
 
 	public void setIsLooted(bool b) {
 		looted = b;
+		if (looted)
+			lights.SetActive (false);
 	}
 
 	private void Unlocked(){

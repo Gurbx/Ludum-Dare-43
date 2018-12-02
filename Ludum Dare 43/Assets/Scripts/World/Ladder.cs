@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class Ladder : MonoBehaviour {
 	
 	private GameObject popupText;
+	private GameObject player;
 	private bool canInteract = false;
 
 
 	void Start () {
 		popupText = GameObject.Find ("UI/Popup Text");
+		player = GameObject.Find ("Player");
 	}
 	
 	// Update is called once per frame
@@ -21,7 +23,9 @@ public class Ladder : MonoBehaviour {
 	}
 
 	void Climb() {
+		//PlayerStatus.SaveInventory ();
 		SceneManager.LoadScene ("Assets/Scenes/PlayScene.unity", LoadSceneMode.Single);
+		player.GetComponent<PlayerStatus> ().SaveLoot ();
 	}
 
 	void OnTriggerEnter(Collider col) {

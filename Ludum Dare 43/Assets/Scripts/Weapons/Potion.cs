@@ -7,6 +7,7 @@ public class Potion : MonoBehaviour, UsableItem {
 	enum PotionType { HEALTH, MANA };
 	[SerializeField] PotionType type;
 	[SerializeField] int amountRestored;
+	public int id;
 
 	public PlayerStatus stats;
 	private InventorySlot slot;
@@ -51,5 +52,13 @@ public class Potion : MonoBehaviour, UsableItem {
 
 	public void SetProjectileSpawn(Transform tf) {
 		this.projectileSpawn = tf;
+	}
+
+	public int getID() {
+		return id;
+	}
+
+	public void SetID (int id) {
+		this.id = id;
 	}
 }

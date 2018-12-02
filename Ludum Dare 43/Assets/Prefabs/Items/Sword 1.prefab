@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 0}
+  id: 11
   name: Sword
   description: 1 Damage
   icon: {fileID: 21300024, guid: e8623039e8ad8f940b0d007f451c3ead, type: 3}

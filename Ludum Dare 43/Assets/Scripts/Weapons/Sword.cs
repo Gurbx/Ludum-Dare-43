@@ -12,6 +12,7 @@ public class Sword : MonoBehaviour, UsableItem {
 
 	private Animator animator;
 
+	public int id;
 	[SerializeField] string name;
 	[TextArea]
 	[SerializeField] string description;
@@ -81,5 +82,13 @@ public class Sword : MonoBehaviour, UsableItem {
 
 	public void SetProjectileSpawn(Transform tf) {
 		this.projectileSpawn = tf;
+	}
+
+	public int getID() {
+		return id;
+	}
+
+	public void SetID (int id) {
+		this.id = id;
 	}
 }

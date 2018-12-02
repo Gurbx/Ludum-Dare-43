@@ -11,6 +11,7 @@ public class Spell : MonoBehaviour, UsableItem {
 	private float cooldown = 0.65f;
 	private float timer = 0;
 
+	public int id;
 	[SerializeField] string name;
 	[TextArea]
 	[SerializeField] string description;
@@ -80,5 +81,13 @@ public class Spell : MonoBehaviour, UsableItem {
 
 	public void SetProjectileSpawn(Transform tf) {
 		this.projectileSpawn = tf;
+	}
+
+	public int getID() {
+		return id;
+	}
+
+	public void SetID (int id) {
+		this.id = id;
 	}
 }

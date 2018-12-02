@@ -12,4 +12,6 @@ public interface UsableItem {
 	void SetPlayerStatus(PlayerStatus status);
 	void SetProjectileSpawn (Transform transform);
 	void SetItemSlot (InventorySlot slot);
+	int getID ();
+	void SetID (int id);
 }

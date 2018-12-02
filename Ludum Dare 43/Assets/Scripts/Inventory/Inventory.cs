@@ -9,8 +9,7 @@ public class Inventory : MonoBehaviour {
 	private InventorySlot[] slots;
 	private int selectedIndex = 0;
 
-	// Use this for initialization
-	void Start () {
+	void Awake () {
 		slots = GetComponentsInChildren<InventorySlot> ();
 		deselectAll ();
 		slots [selectedIndex].SetSelected (true);
@@ -81,5 +80,9 @@ public class Inventory : MonoBehaviour {
 			}
 		}
 		return null;
+	}
+
+	public InventorySlot[] GetSlots() {
+		return slots;
 	}
 }

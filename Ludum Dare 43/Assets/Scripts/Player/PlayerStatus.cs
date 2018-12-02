@@ -12,7 +12,11 @@ public class PlayerStatus : MonoBehaviour {
 	[SerializeField] AudioSource potionSound;
 	[SerializeField] AudioSource damagedSound;
 
-	public static List<GameObject> playerInventoryItems;
+	//For saving loot
+	[SerializeField] LootTable loot;
+	[SerializeField] WeaponHandler wepHandler;
+	[SerializeField] Inventory inventory;
+	public static List<int> itemIDs;
 
 	public static int health = 10;
 	public static int maxHealth = 10;
@@ -24,7 +28,11 @@ public class PlayerStatus : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		initialize ();
+		print ("start");
+		//initialize ();
+		//itemIDs.Add (2);
+		//itemIDs.Add (4);
+		LoadLoot ();
 	}
 
 	public static void initialize() {
@@ -33,6 +41,25 @@ public class PlayerStatus : MonoBehaviour {
 		mana = 50;
 		maxMana = 50;
 		keys = 10;
+	}
+
+	public void SaveLoot() {
+		itemIDs = new List<int> ();
+		itemIDs.Add (0);
+		InventorySlot[] slots = inventory.GetSlots ();
+		for (int i = 1; i < slots.GetLength(0); i++) {
+			if (slots [i].isSlotEmpty () == false) {
+				itemIDs.Add(slots [i].getItem ().GetComponent<UsableItem>().getID());
+			}
+		}
+	}
+
+	private void LoadLoot() {
+		if (itemIDs == null)
+			return;
+		for (int i = 1; i < itemIDs.Count; i++) {
+			wepHandler.AddItem(loot.GetItem(itemIDs[i]), inventory.GetSlots()[i]);
+		}
 	}
 	
 	// Update is called once per frame

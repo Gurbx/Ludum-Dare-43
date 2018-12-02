@@ -15,16 +15,16 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
+  m_FogColor: {r: 0.056114275, g: 0.122641504, b: 0.10984781, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.06
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.31466997, g: 0.043907437, b: 0.15367603, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0.483
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.26113802, g: 0.2667652, b: 0.25050992, a: 0.483}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1553,7 +1553,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 679158763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.98, y: 0.959, z: 0}
+  m_LocalPosition: {x: 1.13, y: 0.959, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 534669905}
@@ -1569,7 +1569,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.8773585, g: 0.7490655, b: 0.85543436, a: 1}
+  m_Color: {r: 0.26855645, g: 0.692988, b: 0.8018868, a: 1}
   m_Intensity: 1
   m_Range: 15
   m_SpotAngle: 30
@@ -2613,13 +2613,14 @@ MonoBehaviour:
   - {fileID: 1690645814707018, guid: a6c980f47774f0c4daed8b4e63fd2400, type: 2}
   - {fileID: 1690645814707018, guid: 1e52362c6a43b5249ae153dd927bf762, type: 2}
   - {fileID: 1690645814707018, guid: b734274ee74e89d4cad8004ccf1e9901, type: 2}
-  - {fileID: 1690645814707018, guid: d321ad9bbcf413b4f8cae69d31d29d6c, type: 2}
+  - {fileID: 1690645814707018, guid: 1e52362c6a43b5249ae153dd927bf762, type: 2}
   - {fileID: 1690645814707018, guid: 8ab55aef8cf84eb4cbb43c3cc6793b9e, type: 2}
   - {fileID: 1690645814707018, guid: 12bab8dd5a223494ba56844809e0d140, type: 2}
   - {fileID: 1690645814707018, guid: aff8efb9724f2e3459b0dc605148633c, type: 2}
   - {fileID: 1690645814707018, guid: dad7170cb9e1b27498630dda91858a17, type: 2}
   - {fileID: 1690645814707018, guid: 1f89e3a6bcbfa1d4d8e99b2fae046f94, type: 2}
   - {fileID: 1690645814707018, guid: 14fbbb1fa6b557d4bb6895cc6e59de4d, type: 2}
+  - {fileID: 1690645814707018, guid: b734274ee74e89d4cad8004ccf1e9901, type: 2}
 --- !u!4 &893566301
 Transform:
   m_ObjectHideFlags: 0
@@ -2967,8 +2968,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000005722, y: 103.1}
-  m_SizeDelta: {x: 186.3, y: 31}
+  m_AnchoredPosition: {x: -0.000002861, y: 101.5}
+  m_SizeDelta: {x: 208.68, y: 45.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1068804432
 MonoBehaviour:
@@ -2991,7 +2992,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 22
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3002,7 +3003,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Make a Sacrifice
+  m_Text: Make a Sacrafice to Recive a Blessing
 --- !u!222 &1068804433
 CanvasRenderer:
   m_ObjectHideFlags: 0

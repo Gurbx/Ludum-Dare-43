@@ -12,6 +12,8 @@ public class PlayerStatus : MonoBehaviour {
 	[SerializeField] AudioSource potionSound;
 	[SerializeField] AudioSource damagedSound;
 
+	public static List<GameObject> playerInventoryItems;
+
 	public static int health = 10;
 	public static int maxHealth = 10;
 

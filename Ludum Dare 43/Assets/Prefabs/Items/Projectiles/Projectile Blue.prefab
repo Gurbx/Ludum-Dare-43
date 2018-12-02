@@ -321,7 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathExplosion: {fileID: 1457550876432636, guid: 100d8e75158d8f444b503bd9b10eedbb,
     type: 2}
-  speed: 5
+  speed: 6
   damage: 1
 --- !u!135 &135559270182630076
 SphereCollider:
@@ -4961,7 +4961,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d5d17de85f6751c4dae27d586aa6d130, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.86522865, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

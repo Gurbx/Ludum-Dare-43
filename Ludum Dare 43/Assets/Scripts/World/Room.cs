@@ -9,6 +9,7 @@ public class Room : MonoBehaviour {
 	[SerializeField] private bool isCleared = false;
 	[SerializeField] private bool isActive = false;
 
+	[SerializeField] List<GameObject> combatEvents;
 	[SerializeField] GameObject roomEvent;
 
 	// Use this for initialization
@@ -50,7 +51,8 @@ public class Room : MonoBehaviour {
 		isActive = true;
 		setDoorsOpen (false);
 		if (type == RoomType.BATTLE) {
-			roomEvent.GetComponent<CombatEvent> ().SpawnEnemies (gameObject);
+			combatEvents [Random.Range (0, combatEvents.Count)].GetComponent<CombatEvent> ().SpawnEnemies (gameObject);
+			//roomEvent.GetComponent<CombatEvent> ().SpawnEnemies (gameObject);
 		} else if (type == RoomType.SACRAFICE) {
 			roomEvent.GetComponent<Altar> ().SetRoom (gameObject);
 		}

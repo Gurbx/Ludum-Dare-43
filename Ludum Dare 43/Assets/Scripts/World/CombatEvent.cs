@@ -5,6 +5,9 @@ using UnityEngine;
 public class CombatEvent : MonoBehaviour {
 	[SerializeField] private Vector2Int numberOfEnemiesRange;
 	[SerializeField] private List<GameObject> enemyTypes;
+	[SerializeField] private float spawnHeight;
+	[SerializeField] private GameObject spawnEffect;
+	[SerializeField] private int spawnSpread;
 
 	private int enemiesCount = -1;
 
@@ -23,8 +26,9 @@ public class CombatEvent : MonoBehaviour {
 	}
 
 	private void SpawnEnemy() {
-		Vector3 position = new Vector3 (room.transform.position.x, 1, room.transform.position.z);
-
+		Vector3 position = new Vector3 (room.transform.position.x, spawnHeight, room.transform.position.z);
+		position.x += Random.Range (-spawnSpread, spawnSpread+1);
+		position.z += Random.Range (-spawnSpread, spawnSpread+1);
 
 		var enemy = (GameObject)Instantiate (
 			enemyTypes[Random.Range(0, enemyTypes.Count)],
@@ -33,6 +37,15 @@ public class CombatEvent : MonoBehaviour {
 
 		enemiesCount++;
 		enemy.GetComponent<Health> ().AddCombatEvent (GetComponent<CombatEvent> ());
+
+		//Spawn effect
+		var expl = (GameObject)Instantiate(
+			spawnEffect,
+			position,
+			room.transform.rotation);
+		
+		// Destroy after 1 seconds
+		Destroy(expl, 1.0f);    
 	}
 
 	//Called from enemy health script

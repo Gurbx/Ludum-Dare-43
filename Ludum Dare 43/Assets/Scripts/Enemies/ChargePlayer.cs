@@ -9,6 +9,7 @@ public class ChargePlayer : MonoBehaviour {
 	[SerializeField] private float aggroRange;
 	[SerializeField] private int damage;
 	[SerializeField] private float attackCooldown;
+	[SerializeField] private bool isGrounded = false;
 
 	private float cooldown;
 
@@ -38,6 +39,9 @@ public class ChargePlayer : MonoBehaviour {
 
 	private void HandleMovement() {
 		Vector3 dir = (player.transform.position - transform.position).normalized * speed;
+
+		if (isGrounded)
+			dir.y = 0;
 
 		if (cooldown > 0) {
 			rigidbody.velocity = -dir;

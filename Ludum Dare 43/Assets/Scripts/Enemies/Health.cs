@@ -7,7 +7,13 @@ public class Health : MonoBehaviour {
 	[SerializeField] private int health = 1;
 	[SerializeField] GameObject deathExplosion;
 	[SerializeField] AudioSource audio;
+
+	[SerializeField] GameObject deathSpawn;
+	[SerializeField] int deathSpawnAmount = 1;
 	//[SerializeField] private ParticleEmitter emit;
+
+	private float timer = 0;
+	private const float COOLDOWN = 0.25f;
 
 	private CombatEvent listener;
 
@@ -17,8 +23,15 @@ public class Health : MonoBehaviour {
 		animator = GetComponent<Animator> ();
 	}
 
+	void Update() {
+		timer -= Time.deltaTime;
+	}
 
 	public void Damage(int damage) {
+		if (timer > 0)
+			return;
+
+		timer = COOLDOWN;
 		animator.SetTrigger ("Hit");
 		health -= damage;
 		if (health <= 0) {
@@ -36,6 +49,15 @@ public class Health : MonoBehaviour {
 	private void Die() {
 		listener.EnemyDied ();
 		DeathExplosion ();
+		if (deathSpawn != null) {
+			for (int i = 0; i < deathSpawnAmount; i++) {
+				var spwn = (GameObject)Instantiate(
+					deathSpawn,
+					transform.position,
+					transform.rotation);
+				spwn.GetComponent<Health> ().AddCombatEvent (listener);
+			}
+		}
 		Destroy (gameObject);
 	}
 

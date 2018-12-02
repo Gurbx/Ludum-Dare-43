@@ -1236,7 +1236,7 @@ GameObject:
   - component: {fileID: 114560799592274128}
   - component: {fileID: 65260303638585776}
   m_Layer: 0
-  m_Name: Room
+  m_Name: Battle Room
   m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10029,7 +10029,12 @@ MonoBehaviour:
   doorSouth: {fileID: 1224681601526816}
   isCleared: 0
   isActive: 0
-  roomEvent: {fileID: 1258043266547250, guid: 7cbd12a97db614145a08ffa298cb2595, type: 2}
+  combatEvents:
+  - {fileID: 1258043266547250, guid: 7cbd12a97db614145a08ffa298cb2595, type: 2}
+  - {fileID: 1258043266547250, guid: e8e81c56c9a68f74c894108ea879251b, type: 2}
+  - {fileID: 1258043266547250, guid: 2bebf470c4d9715458e34ae81850ac9d, type: 2}
+  - {fileID: 1258043266547250, guid: 0679918d9db7a554ca9add23e5dc69fa, type: 2}
+  roomEvent: {fileID: 0}
 --- !u!114 &114639322800201796
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1406,6 +1406,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4706532216600346}
+  - component: {fileID: 135052820844966300}
+  - component: {fileID: 114716365351218342}
   m_Layer: 0
   m_Name: Altar
   m_TagString: Untagged
@@ -10399,10 +10401,9 @@ MonoBehaviour:
   doorEast: {fileID: 1864326602022944}
   doorNorth: {fileID: 1970090142156206}
   doorSouth: {fileID: 1224681601526816}
-  isCleared: 1
+  isCleared: 0
   isActive: 0
-  combatEvent: {fileID: 1258043266547250, guid: 7cbd12a97db614145a08ffa298cb2595,
-    type: 2}
+  roomEvent: {fileID: 1703688424308130}
 --- !u!114 &114639322800201796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10417,6 +10418,31 @@ MonoBehaviour:
   wall: {fileID: 1478406400963036}
   door: {fileID: 1411435798446798}
   isDoor: 0
+--- !u!114 &114716365351218342
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1703688424308130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9373a24e5b6535740bc218c7f4227d78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 212115796313412158}
+  usedSprite: {fileID: 21300028, guid: e8623039e8ad8f940b0d007f451c3ead, type: 3}
+--- !u!135 &135052820844966300
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1703688424308130}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.6
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136291462347644226
 CapsuleCollider:
   m_ObjectHideFlags: 1

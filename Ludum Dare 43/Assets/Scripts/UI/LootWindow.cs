@@ -27,10 +27,10 @@ public class LootWindow : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Y) && windowActive){
+		if (Input.GetKeyDown(KeyCode.Alpha1) && windowActive){
 			LootItem ();
 		}
-		if (Input.GetKeyDown(KeyCode.N) && windowActive){
+		if (Input.GetKeyDown(KeyCode.Alpha2) && windowActive){
 			Deactivate ();
 		}
 	}

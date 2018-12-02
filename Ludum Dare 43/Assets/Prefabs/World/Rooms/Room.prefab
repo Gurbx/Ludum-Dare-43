@@ -10029,8 +10029,7 @@ MonoBehaviour:
   doorSouth: {fileID: 1224681601526816}
   isCleared: 0
   isActive: 0
-  combatEvent: {fileID: 1258043266547250, guid: 7cbd12a97db614145a08ffa298cb2595,
-    type: 2}
+  roomEvent: {fileID: 1258043266547250, guid: 7cbd12a97db614145a08ffa298cb2595, type: 2}
 --- !u!114 &114639322800201796
 MonoBehaviour:
   m_ObjectHideFlags: 1

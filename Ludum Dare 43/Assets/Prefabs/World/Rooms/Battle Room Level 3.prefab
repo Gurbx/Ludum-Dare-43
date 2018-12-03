@@ -1236,7 +1236,7 @@ GameObject:
   - component: {fileID: 114560799592274128}
   - component: {fileID: 65260303638585776}
   m_Layer: 0
-  m_Name: Battle Room Level 2
+  m_Name: Battle Room Level 3
   m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10030,8 +10030,8 @@ MonoBehaviour:
   isCleared: 0
   isActive: 0
   combatEvents:
-  - {fileID: 1258043266547250, guid: 2bebf470c4d9715458e34ae81850ac9d, type: 2}
   - {fileID: 1258043266547250, guid: a7cd3886b161699419ebf78f1d03f556, type: 2}
+  - {fileID: 1258043266547250, guid: 0679918d9db7a554ca9add23e5dc69fa, type: 2}
   roomEvent: {fileID: 0}
 --- !u!114 &114639322800201796
 MonoBehaviour:

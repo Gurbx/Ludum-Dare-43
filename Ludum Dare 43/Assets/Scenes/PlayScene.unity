@@ -4371,6 +4371,13 @@ MonoBehaviour:
   - {fileID: 1615700964407636, guid: d4847238ca1224c4a8c6a3ef8322cb7b, type: 2}
   - {fileID: 1615700964407636, guid: 8e1b24bca8ad5b745b58b830725db51d, type: 2}
   - {fileID: 1791425181443232, guid: 514bb1f7bec803b44ba1534f1e8aadb2, type: 2}
+  roomsLevel3:
+  - {fileID: 1615700964407636, guid: 8e1b24bca8ad5b745b58b830725db51d, type: 2}
+  - {fileID: 1615700964407636, guid: d4847238ca1224c4a8c6a3ef8322cb7b, type: 2}
+  - {fileID: 1615700964407636, guid: de679e3c5bfc5d34199afb04dd9edc2b, type: 2}
+  - {fileID: 1615700964407636, guid: de679e3c5bfc5d34199afb04dd9edc2b, type: 2}
+  - {fileID: 1615700964407636, guid: d4847238ca1224c4a8c6a3ef8322cb7b, type: 2}
+  - {fileID: 1791425181443232, guid: 514bb1f7bec803b44ba1534f1e8aadb2, type: 2}
 --- !u!4 &1762244134
 Transform:
   m_ObjectHideFlags: 0

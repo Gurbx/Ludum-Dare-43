@@ -24,8 +24,12 @@ public class Ladder : MonoBehaviour {
 
 	void Climb() {
 		//PlayerStatus.SaveInventory ();
-		SceneManager.LoadScene ("Assets/Scenes/PlayScene.unity", LoadSceneMode.Single);
-		player.GetComponent<PlayerStatus> ().SaveLoot ();
+		if (DungeonGenerator.dungeonLevel > 5) {
+			SceneManager.LoadScene ("Assets/Scenes/WinScene.unity", LoadSceneMode.Single);
+		} else {
+			SceneManager.LoadScene ("Assets/Scenes/PlayScene.unity", LoadSceneMode.Single);
+			player.GetComponent<PlayerStatus> ().SaveLoot ();
+		}
 	}
 
 	void OnTriggerEnter(Collider col) {

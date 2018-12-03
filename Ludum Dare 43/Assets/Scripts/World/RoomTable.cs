@@ -9,6 +9,7 @@ public class RoomTable : MonoBehaviour {
 	[SerializeField] private GameObject endRoom;
 	[SerializeField] private List<GameObject> roomsLevel1;
 	[SerializeField] private List<GameObject> roomsLevel2;
+	[SerializeField] private List<GameObject> roomsLevel3;
 
 	public List<GameObject> GetLevelRooms(int roomCount, int level) {
 		List<GameObject> generatedRooms = new List<GameObject> ();
@@ -19,6 +20,8 @@ public class RoomTable : MonoBehaviour {
 		} else if (level == 2) {
 			//Level 2 specifics
 			roomsList = roomsLevel2;
+		} else {
+			roomsList = roomsLevel3;
 		}
 
 		generatedRooms.Add (lootRoom);

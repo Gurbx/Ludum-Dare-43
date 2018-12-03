@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DungeonGenerator : MonoBehaviour {
 
-	private static int dungeonLevel = 1;
+	[SerializeField] Text levelText;
+
+	public static int dungeonLevel = 1;
 	[SerializeField] private GameObject spawnRoom;
 	[SerializeField] private GameObject roomTable;
 	[SerializeField] private int numberOfRooms;
@@ -19,6 +22,7 @@ public class DungeonGenerator : MonoBehaviour {
 	void Start () {
 		grid = new GameObject[28,28];
 
+		levelText.text = "Level: " + dungeonLevel + "/5";
 		rooms = roomTable.GetComponent<RoomTable> ().GetLevelRooms (numberOfRooms, dungeonLevel);
 			
 

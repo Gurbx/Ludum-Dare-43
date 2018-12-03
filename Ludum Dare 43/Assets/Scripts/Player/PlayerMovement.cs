@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour {
 	private Vector3 moveDirection = Vector3.zero;
 	private CharacterController charController;
 
+	private bool walkSoundIsPlaying = false;
+	//[SerializeField] AudioSource walkSound;
+
 	void Start () {
 		charController = GetComponent<CharacterController> ();
 	}
@@ -23,5 +26,18 @@ public class PlayerMovement : MonoBehaviour {
 
 		moveDirection.y -= gravity * Time.deltaTime;
 		charController.Move (moveDirection * Time.deltaTime);
+
+
+		//Audio feet
+		//Vector2 horizontalMovement = new Vector2 (moveDirection.x, moveDirection.z);
+
+		//if (horizontalMovement.magnitude != 0 && !walkSoundIsPlaying) {
+		//	walkSoundIsPlaying = true;
+		//	walkSound.Play ();
+
+		//} else {
+		//	walkSound.Stop ();
+		//	walkSoundIsPlaying = false;
+		//}
 	}
 }

@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerStatus : MonoBehaviour {
 
 	[SerializeField] private HealthBar hpBar;
 	[SerializeField] private ManaBar mpBar;
 	[SerializeField] private KeyInfo keyInfo;
+	[SerializeField] CameraController camController;
 
 	[SerializeField] AudioSource potionSound;
 	[SerializeField] AudioSource damagedSound;
@@ -68,6 +70,7 @@ public class PlayerStatus : MonoBehaviour {
 	}
 
 	public void DamagePlayer(int damage) {
+		//camController.ShakeCamera (0.05f);
 		damagedSound.Play ();
 		health -= damage;
 		if (health <= 0) {
@@ -113,7 +116,7 @@ public class PlayerStatus : MonoBehaviour {
 
 
 	private static void GameOver() {
-		print ("Game Over");
+		SceneManager.LoadScene ("Assets/Scenes/GameOverScene.unity", LoadSceneMode.Single);
 	}
 
 	public void RemoveKey() {

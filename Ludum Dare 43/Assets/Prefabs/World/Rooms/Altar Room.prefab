@@ -2308,7 +2308,7 @@ Transform:
   m_GameObject: {fileID: 1537284866762336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.59, z: 0}
-  m_LocalScale: {x: 1.25, y: 2, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.4, z: 1}
   m_Children: []
   m_Father: {fileID: 4706532216600346}
   m_RootOrder: 4
@@ -10403,6 +10403,7 @@ MonoBehaviour:
   doorSouth: {fileID: 1224681601526816}
   isCleared: 0
   isActive: 0
+  combatEvents: []
   roomEvent: {fileID: 1703688424308130}
 --- !u!114 &114639322800201796
 MonoBehaviour:

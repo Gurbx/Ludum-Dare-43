@@ -7,16 +7,38 @@ public class CameraController : MonoBehaviour {
 	[SerializeField] private float mouseSensitivity;
 	[SerializeField] private Transform playerTransform;
 
-	private float xClamp = 0;
+	//CAM SHAKE
+	public float shakeDuration = 0f;
+	public float shakeAmount = 0.003f;
+	public float decreaseFactor = 0.4f;
+	Vector3 originalPos;
+
+	private float xClamp = 0f;
 
 	void Start () {
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 		xClamp = 0;
+		originalPos = transform.localPosition;
 	}
 
 	void Update () {
 		HandleRotation ();
+		HandleShake ();
+	}
+
+	void HandleShake() {
+		if (shakeDuration > 0)
+		{
+			transform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+
+			shakeDuration -= Time.deltaTime * decreaseFactor;
+		}
+		else
+		{
+			shakeDuration = 0f;
+			transform.localPosition = originalPos;
+		}
 	}
 
 	private void HandleRotation() {
@@ -44,6 +66,11 @@ public class CameraController : MonoBehaviour {
 		Vector3 eulerRotation = transform.eulerAngles;
 		eulerRotation.x = value;
 		transform.eulerAngles = eulerRotation;
+	}
+
+	public void ShakeCamera(float duration) {
+		originalPos = transform.localPosition;
+		shakeDuration = duration;
 	}
 
 }

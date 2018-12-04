@@ -37,18 +37,21 @@ public class SacrificeWindow : MonoBehaviour {
 
 	private void Sacrafice1() {
 		playerStatus.DamagePlayer (1);
-		playerStatus.increaseMaxMana (5);
-		playerStatus.addMana (5);
+		//Effect
+		playerStatus.addMana (50);
 	}
 
 	private void Sacrafice2() {
 		playerStatus.DamagePlayer (2);
+		//Effect
 		playerStatus.increaseMaxHealth (2);
 	}
 
 	private void Sacrafice3() {
 		playerStatus.DamagePlayer (5);
+		//Effect
 		playerStatus.increaseMaxHealth (10);
+		playerStatus.addMana (50);
 	}
 
 	public void Activate(GameObject altar) {

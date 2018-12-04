@@ -54,11 +54,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  amountRestored: 15
-  audio: {fileID: 0}
+  amountRestored: 25
+  id: 10
   stats: {fileID: 0}
   name: Mana Potion
-  description: Restores 15 MP
+  description: Restores 25 MP
   icon: {fileID: 21300022, guid: e8623039e8ad8f940b0d007f451c3ead, type: 3}
 --- !u!114 &114297340918926714
 MonoBehaviour:

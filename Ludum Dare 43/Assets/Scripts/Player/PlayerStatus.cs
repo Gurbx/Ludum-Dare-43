@@ -20,8 +20,8 @@ public class PlayerStatus : MonoBehaviour {
 	[SerializeField] Inventory inventory;
 	public static List<int> itemIDs;
 
-	public static int health = 10;
-	public static int maxHealth = 10;
+	public static int health = 15;
+	public static int maxHealth = 15;
 
 	public static int mana = 50;
 	public static int maxMana = 50;
@@ -38,8 +38,8 @@ public class PlayerStatus : MonoBehaviour {
 	}
 
 	public static void initialize() {
-		health = 10;
-		maxHealth = 10;
+		health = 15;
+		maxHealth = 15;
 		mana = 50;
 		maxMana = 50;
 		keys = 10;

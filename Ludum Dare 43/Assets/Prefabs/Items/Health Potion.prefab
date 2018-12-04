@@ -54,11 +54,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  amountRestored: 3
-  audio: {fileID: 0}
+  amountRestored: 6
+  id: 3
   stats: {fileID: 0}
   name: Health Potion
-  description: Restores 3 HP
+  description: Restores 6 HP
   icon: {fileID: 21300020, guid: e8623039e8ad8f940b0d007f451c3ead, type: 3}
 --- !u!114 &114297340918926714
 MonoBehaviour:

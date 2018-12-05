@@ -30,6 +30,7 @@ public class PlayerStatus : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		print ("start");
 		//initialize ();
 		//itemIDs.Add (2);
 		//itemIDs.Add (4);
@@ -42,7 +43,6 @@ public class PlayerStatus : MonoBehaviour {
 		mana = 50;
 		maxMana = 50;
 		keys = 10;
-		if (itemIDs != null) itemIDs.Clear ();
 	}
 
 	public void SaveLoot() {

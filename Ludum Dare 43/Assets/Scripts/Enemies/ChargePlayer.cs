@@ -16,17 +16,13 @@ public class ChargePlayer : MonoBehaviour {
 	private GameObject player;
 	private Rigidbody rigidbody;
 
-	private Transform target;
-
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindWithTag ("Player");
 		rigidbody = GetComponent<Rigidbody> ();
-
-		target = player.transform;
 	}
 
-	void Update () {
+	void FixedUpdate() {
 		cooldown -= Time.deltaTime;
 
 		if (Vector3.Distance (transform.position, player.transform.position) < aggroRange) {

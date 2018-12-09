@@ -21,6 +21,9 @@ public class Health : MonoBehaviour {
 
 	void Start () {
 		animator = GetComponent<Animator> ();
+        if (animator == null) {
+            animator = GetComponentInChildren<Animator>();
+        }
 	}
 
 	void Update() {
@@ -47,8 +50,10 @@ public class Health : MonoBehaviour {
 	}
 
 	private void Die() {
-		listener.EnemyDied ();
-		DeathExplosion ();
+        if (listener != null) {
+            listener.EnemyDied();
+        }
+        DeathExplosion ();
 		if (deathSpawn != null) {
 			for (int i = 0; i < deathSpawnAmount; i++) {
 				var spwn = (GameObject)Instantiate(
